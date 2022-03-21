@@ -1,6 +1,8 @@
 /// @function shine_setup(id);
 /// @param {index} id  player id
 
+// sets up the shine class specific variables and traits
+
 function shine_setup(id){
 	
 		// physics limits //

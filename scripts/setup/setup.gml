@@ -1,6 +1,8 @@
 /// @function setup(player_id);
 /// @param {index} player_id  Description
 
+// setup scripts that all players have, to intialise variables etc.
+
 function setup(player_id){
 	with(player_id){
 
@@ -29,9 +31,6 @@ function setup(player_id){
 		
 		smokeEff = 0;
 
-		special_buffer = 0;
-		normal_buffer = 0;
-
 		hitstun_timer = 0;
 
 		STATE = [];
@@ -58,7 +57,7 @@ function setup(player_id){
 			image_alpha = 0.75;
 			
 		}
-		
+	
 		jumpbuffer = 0;
 
 	}

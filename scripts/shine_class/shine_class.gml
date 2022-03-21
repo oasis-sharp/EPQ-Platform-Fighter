@@ -9,15 +9,8 @@ function shine_class(id){
 		
 		var rightHeld = keyboard_check(right);
 		var leftHeld = keyboard_check(left);
-		var jumpHeld = keyboard_check(up);
-		var downHeld = keyboard_check(down); 
-		var walkHeld = keyboard_check(walk1);
-		var dodgeHeld = keyboard_check(dodge);
-		var upHeld = keyboard_check(upDir);
 		
 		var jumpPressed = keyboard_check_pressed(up);
-		var downPressed = keyboard_check_pressed(down);
-		var dodgePressed = keyboard_check_pressed(dodge);
 		
 		// attacks
 		
@@ -26,9 +19,8 @@ function shine_class(id){
 
 
 
-		//// begin movement code ////
+		//// begin attacking code ////
 
-		var move = rightHeld-leftHeld;
 		var attackable = 0;
 		
 		if(find_in_array(STATE, "attacking") == -4 and find_in_array(STATE, "histun") == -4){
