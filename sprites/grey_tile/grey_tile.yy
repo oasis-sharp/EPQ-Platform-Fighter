@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"grey_tile","path":"sprites/grey_tile/grey_tile.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "grey_tile",
     "tags": [],
     "resourceType": "GMSequence",

@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"pShineBox","path":"sprites/pShineBox/pShineBox.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "pShineBox",
     "tags": [],
     "resourceType": "GMSequence",

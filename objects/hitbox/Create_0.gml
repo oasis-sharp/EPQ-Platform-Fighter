@@ -15,6 +15,8 @@ hBox_hitpause = noone;
 hBox_screenshakeTime = noone;
 hBox_screenshakeIntensity = noone;
 
+link = noone;
+
 image_alpha = 0;
 
 debug_knockback = 0;

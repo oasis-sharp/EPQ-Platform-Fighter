@@ -23,3 +23,4 @@ with(child = instance_create_layer(x,y, "Instances", player_child)){
 
 setup(id);
 shine_setup(id);
+shine_ai_setup(id);

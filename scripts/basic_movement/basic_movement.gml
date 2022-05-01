@@ -8,20 +8,6 @@ function basic_movement(playerID){
 	with(playerID){
 		
 		phy_rotation = false;
-		
-		//// input handling ////
-		
-		// movement
-		
-		var rightHeld = keyboard_check(right);
-		var leftHeld = keyboard_check(left);
-		var jumpHeld = keyboard_check(up);
-		var downHeld = keyboard_check(down); 
-		var walkHeld = keyboard_check(walk1);
-		var upHeld = keyboard_check(upDir);
-		
-		var jumpPressed = keyboard_check_pressed(up);
-		var dodgePressed = keyboard_check_pressed(dodge);
 
 		// histun 
 		
@@ -32,6 +18,13 @@ function basic_movement(playerID){
 			add_to_array(STATE, "noControlAir");	
 			add_to_array(STATE, "hitstun");
 			
+			image_blend = make_colour_rgb(255, 112, 112);
+			
+			if(place_meeting(x, y+phy_speed_y, tile_obj)){
+				phy_speed_y*=-0.8;
+				phy_speed_x/=groundFriction;
+			}
+			
 			phy_speed_x/=1.01
 		}
 		
@@ -39,6 +32,7 @@ function basic_movement(playerID){
 			delete_from_array(STATE, "noControlGround");
 			delete_from_array(STATE, "noControlAir");
 			delete_from_array(STATE, "hitstun");
+			image_blend = c_white;
 		}
 
 
@@ -80,7 +74,13 @@ function basic_movement(playerID){
 		// sliding mechanics
 		
 		if(grounded and (move = 0 or find_in_array(STATE, "noControlGround")) and find_in_array(STATE, "initialDash") == -4 and phy_speed_x != 0){
-			phy_speed_x/=groundFriction;
+			if(hitstun_timer < 1){
+				phy_speed_x/=groundFriction;
+			}
+			else{
+				phy_speed_y=abs(phy_speed_x)*-0.8;
+				phy_speed_x/=1.1;
+			}
 			
 			if(abs(phy_speed_x) <= 1){
 				phy_speed_x=0;	
@@ -229,7 +229,7 @@ function basic_movement(playerID){
 		
 		wavedashing = 0;
 		
-		if(dodgePressed and (!grounded or jumpSquat > 0) and canDodge = 1){
+		if(dodgePressed and (!grounded or jumpSquat > 0) and canDodge = 1 and find_in_array(STATE, "noControlAir") == -4){
 			canDodge = 0;	
 			phy_speed_y = airdodgeSpeed;
 			phy_speed_x = (move)*airdodgeSpeed
@@ -307,8 +307,8 @@ function basic_movement(playerID){
 			
 		// update image scale 
 		
-		image_xscale=5*facing;
-		image_yscale=5;
+		image_xscale=4*facing;
+		image_yscale=4;
 		
 		if(jumpSquat > 0){
 			add_to_array(STATE, "jumpsquat");

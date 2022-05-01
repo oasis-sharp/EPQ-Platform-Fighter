@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"black_platform","path":"sprites/black_platform/black_platform.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "black_platform",
     "tags": [],
     "resourceType": "GMSequence",

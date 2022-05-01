@@ -17,13 +17,20 @@ if(keyboard_check_pressed(vk_escape)){
 
 
 if(hitpause_timer > 0){
-
-	instance_deactivate_all(true);
-	physics_world_update_speed(0);
 	
-	if(!sprite_exists(screenShot)){
-        screenShot = sprite_create_from_surface(application_surface,0,0,view_wport,view_hport,0,0,0,0);   
-    }
+	if(beginHitpause == 0){
+
+		instance_deactivate_all(true);
+		physics_world_update_speed(0);
+	
+		if(!sprite_exists(screenShot)){
+	        screenShot = sprite_create_from_surface(application_surface,0,0,view_wport,view_hport,0,0,0,0);   
+	    }
+	}
+	
+	else{
+		beginHitpause = 0;
+	}
 	
 }
 else{

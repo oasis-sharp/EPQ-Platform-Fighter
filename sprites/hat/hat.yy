@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"hat","path":"sprites/hat/hat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "hat",
     "tags": [],
     "resourceType": "GMSequence",

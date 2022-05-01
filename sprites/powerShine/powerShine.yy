@@ -99,7 +99,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"powerShine","path":"sprites/powerShine/powerShine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "powerShine",
     "tags": [],
     "resourceType": "GMSequence",

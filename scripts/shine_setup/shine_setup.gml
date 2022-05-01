@@ -11,13 +11,13 @@ function shine_setup(id){
 		x_cap = 14;
 		y_cap = 20;
 		
-		air_xcap = 10;
+		air_xcap = 7;
 
 		// player traits //
 		
 		weight = 1000;
 
-		walksp = 8;
+		walksp = 7;
 		groundFriction = 1.23;
 		airFriction = 1.01;
 		jumpheight = 16;

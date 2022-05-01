@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"black_tile","path":"sprites/black_tile/black_tile.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "black_tile",
     "tags": [],
     "resourceType": "GMSequence",

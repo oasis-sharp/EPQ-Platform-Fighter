@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "play_button",
+    "path": "sprites/play_button/play_button.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": {

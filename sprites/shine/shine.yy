@@ -91,7 +91,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"shine","path":"sprites/shine/shine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "shine",
     "tags": [],
     "resourceType": "GMSequence",

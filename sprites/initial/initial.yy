@@ -87,7 +87,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"initial","path":"sprites/initial/initial.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "initial",
     "tags": [],
     "resourceType": "GMSequence",

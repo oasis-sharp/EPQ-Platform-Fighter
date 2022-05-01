@@ -103,7 +103,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"air","path":"sprites/air/air.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "air",
     "tags": [],
     "resourceType": "GMSequence",

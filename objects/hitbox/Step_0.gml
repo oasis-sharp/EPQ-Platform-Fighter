@@ -8,6 +8,9 @@ if (hBox_attached == true) {
 	y=hBox_owner.y
 }
 
+if(link){
+	image_index = hBox_owner.image_index;	
+}
 
 
 var _list = ds_list_create();
@@ -26,19 +29,21 @@ if _num > 0
 			col.parentID.hitstun_timer = hBox_hitstun;
 			col.parentID.percent+=hBox_damage;
 			
-			if(col.parentID.x > hBox_owner.x){	var dir = 1;	} else{	var dir = -1;	}
+			if(col.parentID.x < hBox_owner.x and hBox_angle_flipper == 1){	var dir = -1;	} else{	var dir = 1;	}
 			
 			var kb  = calculate_knockback(hBox_kb, hBox_growth, col.parentID.percent, col.parentID.weight)
 			debug_knockback = kb; // sends data to debugger to print
 			
 			
-			var diUp = keyboard_check(col.parentID.down)-keyboard_check(col.parentID.upDir);
-			var diRight = keyboard_check(col.parentID.right)-keyboard_check(col.parentID.left);
-						
-			var vkb = (calculate_vkb(kb, hBox_angle_flipper, hBox_angle)+(hBox_diM*diUp*(kb/7)))*1.2;
-			var hkb = calculate_hkb(kb, hBox_angle_flipper, hBox_angle)+(hBox_diM*diRight*(kb/10));		
+			var diUp = (col.parentID.downHeld-col.parentID.upHeld)*-1;
+			var diRight = col.parentID.rightHeld-col.parentID.leftHeld;
 			
-			if(hBox_angle_flipper == 1){ hkb*=dir; }
+			// var diUp = round(random_range(-1, 1));
+			// var diRight = round(random_range(-1, 1));
+			
+			var vkb = (calculate_vkb(kb, hBox_angle_flipper, hBox_angle)+(hBox_diM*diUp*(kb/7)))*1.2;
+			var hkb = (calculate_hkb(kb, hBox_angle_flipper, hBox_angle)+(hBox_diM*diRight*(kb/10)))*dir;		
+			
 			
 			col.parentID.phy_speed_x = hkb;
 			col.parentID.phy_speed_y = vkb;
@@ -46,6 +51,19 @@ if _num > 0
 			debugger.hitpause_timer = hBox_hitpause;
 			debugger.screenshakeTimer = hBox_screenshakeTime;
 			debugger.screenshakeIntensity = hBox_screenshakeIntensity;
+			debugger.beginHitpause = 1;
+			
+			
+				
+			if(diRight != 0 or diUp != 0){	
+				var di = instance_create_layer(col.x,col.y-16, "Instances", DIobject)
+				di.image_angle = point_direction(0,0, diRight, diUp);
+			}
+			
+			hBox_owner.hitLanded = 1;
+			
+			col.parentID.hitflash = 1;
+			col.parentID.image_blend = c_red;
 			
 		}
     }

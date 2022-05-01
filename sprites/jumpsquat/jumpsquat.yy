@@ -79,7 +79,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"jumpsquat","path":"sprites/jumpsquat/jumpsquat.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "jumpsquat",
     "tags": [],
     "resourceType": "GMSequence",

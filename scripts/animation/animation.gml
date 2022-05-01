@@ -53,6 +53,7 @@ function animation(playerID){
 				}	
 			}
 			
+
 			
 			// reset animation frame if starting a new animation
 			

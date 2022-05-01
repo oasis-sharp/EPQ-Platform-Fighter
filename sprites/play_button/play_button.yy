@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"play_button","path":"sprites/play_button/play_button.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "play_button",
     "tags": [],
     "resourceType": "GMSequence",

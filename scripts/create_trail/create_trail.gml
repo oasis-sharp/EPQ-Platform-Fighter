@@ -22,6 +22,9 @@ function create_trail(_length,c, a,s, g, pos_x, pos_y){
 		trail.life = _length;
 		trail.x = pos_x;
 		trail.y = pos_y;
+		trail.depth = 30;
+		
+		return trail;
 		
 	}
 

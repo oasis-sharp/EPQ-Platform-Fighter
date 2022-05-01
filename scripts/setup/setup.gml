@@ -13,6 +13,8 @@ function setup(player_id){
 		
 		// gameplay vars //
 		
+		hitflash = noone;
+		
 		facing = 1;
 		lastDash = 0;
 		initialDashTimer = 0;
@@ -35,11 +37,30 @@ function setup(player_id){
 
 		STATE = [];
 
-
 		percent = 0;
 		
+		hurtboxID = noone;
+		
+		hitLanded = 0;
+		
+		// controls
+		
+		rightHeld = keyboard_check(right);
+		leftHeld = keyboard_check(left);
+		jumpHeld = keyboard_check(up);
+		downHeld = keyboard_check(down); 
+		walkHeld = keyboard_check(walk1);
+		upHeld = keyboard_check(upDir);
+		
+		jumpPressed = keyboard_check_pressed(up);
+		dodgePressed = keyboard_check_pressed(dodge);
+		
+		normalPressed = keyboard_check_pressed(normal);
+		specialPressed = keyboard_check_pressed(special);
+		
 		with(instance_create_layer(x,y, "Instances", hurtbox)){
-			parentID = other.id	
+			parentID = other.id;
+			other.hurtboxID = id;
 		}
 		
 		with(instance_create_layer(x,y, "Instances", hat_obj)){
@@ -54,7 +75,7 @@ function setup(player_id){
 				image_blend = c_red;
 			}
 			
-			image_alpha = 0.75;
+			image_alpha = 0.50;
 			
 		}
 	

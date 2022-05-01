@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"white_tile","path":"sprites/white_tile/white_tile.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "white_tile",
     "tags": [],
     "resourceType": "GMSequence",

@@ -13,3 +13,5 @@ scoreP2 = 0;
 
 percentP1 = 0;
 percentP2 = 0;
+
+beginHitpause = 0;

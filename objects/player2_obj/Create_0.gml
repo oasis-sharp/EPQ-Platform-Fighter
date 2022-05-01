@@ -6,9 +6,13 @@ up = vk_up;
 down = vk_down;
 upDir = vk_up
 walk1 = ord(",");
-dodge = ord(".");
+dodge = ord("B");
 normal = ord("N");
 special = ord("M");
+
+
+
+
 
 child = 0;
 
@@ -19,3 +23,4 @@ with(child = instance_create_layer(x,y, "Instances", player_child)){
 
 setup(id);
 shine_setup(id);
+shine_ai_setup();

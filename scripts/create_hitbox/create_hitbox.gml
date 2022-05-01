@@ -14,9 +14,10 @@
 /// @param {index} growth
 /// @param {index} damage
 /// @param {index} diM DI multiplier
+/// @param {bool} link
 
 
-function create_hitbox(spr, spd, length, knockback, angle, angle_flipper, size_x, size_y, pos_x, pos_y, attached, hitstun, growth, damage, DiM){
+function create_hitbox(spr, spd, length, knockback, angle, angle_flipper, size_x, size_y, pos_x, pos_y, attached, hitstun, growth, damage, DiM, link){
 	
 	var hBoxID = (instance_create_layer(x,y, "Instances", hitbox)){
 		
@@ -43,6 +44,7 @@ function create_hitbox(spr, spd, length, knockback, angle, angle_flipper, size_x
 		
 		hBoxID.hBox_hitstun = hitstun;
 		hBoxID.hBox_diM = DiM;
+		hBoxID.link = link;
 		
 		return hBoxID
 		

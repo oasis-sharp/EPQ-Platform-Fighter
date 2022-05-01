@@ -3,8 +3,8 @@ twoAbove = 0; // variable that the player can grab to check grounded state
 
 
 // store the players inputs in a variable
-var down2 = keyboard_check_pressed(player2_obj.down)
-var down1 = keyboard_check_pressed(player1_obj.down)
+var down2 = player2_obj.downPressed;
+var down1 = player1_obj.downPressed;
 
 if(down1){
 	if(down1Timer > 0){
